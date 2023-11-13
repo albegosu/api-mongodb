@@ -1,7 +1,7 @@
 // config/database.js
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/tu_basedatos', {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

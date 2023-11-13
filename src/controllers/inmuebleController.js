@@ -1,5 +1,5 @@
 // controllers/inmuebleController.js
-const Inmueble = require('../models/inmueble');
+const Inmueble = require('../models/inmueble.js');
 
 // Crear un inmueble
 const crearInmueble = async (req, res) => {
