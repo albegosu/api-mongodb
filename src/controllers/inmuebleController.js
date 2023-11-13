@@ -1,7 +1,5 @@
-// controllers/inmuebleController.js
 const Inmueble = require('../models/inmueble.js');
 
-// Crear un inmueble
 const crearInmueble = async (req, res) => {
   try {
     const nuevoInmueble = new Inmueble(req.body);
@@ -12,7 +10,6 @@ const crearInmueble = async (req, res) => {
   }
 };
 
-// Obtener la lista de inmuebles
 const listarInmuebles = async (req, res) => {
   try {
     const inmuebles = await Inmueble.find();
@@ -22,7 +19,6 @@ const listarInmuebles = async (req, res) => {
   }
 };
 
-// Actualizar un inmueble por ID
 const actualizarInmueble = async (req, res) => {
   try {
     const inmueble = await Inmueble.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -32,7 +28,6 @@ const actualizarInmueble = async (req, res) => {
   }
 };
 
-// Eliminar un inmueble por ID
 const eliminarInmueble = async (req, res) => {
   try {
     await Inmueble.findByIdAndDelete(req.params.id);

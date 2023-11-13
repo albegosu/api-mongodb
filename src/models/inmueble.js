@@ -1,4 +1,3 @@
-// models/inmueble.js
 const mongoose = require('mongoose');
 
 const inmuebleSchema = new mongoose.Schema({
